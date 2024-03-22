@@ -1,8 +1,5 @@
 package FindPerson;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // Класс, представляющий адрес
 class Address {
     String street;
@@ -53,11 +50,17 @@ public class AddressOfHuman {
 
     public static void main(String[] args) {
 //Создание списка объектов класса Person
-        List<Person> people = new ArrayList<>();
-        people.add(new Person("Иван", "Иванов", 1999, new Address("Пушкина", "Тольятти")));
-        people.add(new Person("Петр", "Петров", 2000, new Address("Ленина", "Санкт-Петербург")));
-        people.add(new Person("Анна", "Сидорова", 2002, new Address("Толстого", "Москва")));
-        people.add(new Person("Елена", "Козлова", 2004, new Address("Пушкина", "Тольятти")));
+//        List<Person> people = new ArrayList<>();
+//        people.add(new Person("Иван", "Иванов", 1999, new Address("Пушкина", "Тольятти")));
+//        people.add(new Person("Петр", "Петров", 2000, new Address("Ленина", "Санкт-Петербург")));
+//        people.add(new Person("Анна", "Сидорова", 2002, new Address("Толстого", "Москва")));
+//        people.add(new Person("Елена", "Козлова", 2004, new Address("Пушкина", "Тольятти")));
+
+        Person[] people = {
+                new Person("Иван", "Иванов", 1999, new Address("Пушкина", "Тольятти")),
+                new Person("Петр", "Петров", 2000, new Address("Ленина", "Санкт-Петербург")),
+                new Person("Анна", "Сидорова", 2002, new Address("Толстого", "Москва")),
+                new Person("Елена", "Козлова", 2004, new Address("Пушкина", "Тольятти"))};
 
         //поиск по фамилии
         String searchSurname = "Петров";
@@ -87,8 +90,8 @@ public class AddressOfHuman {
         }
 
 
-        Person oldestPerson = people.get(0);
-        Person youngestPerson = people.get(0);
+        Person oldestPerson = people[0];
+        Person youngestPerson = people[0];
         for (Person person : people) {
             if (person.birthYear < oldestPerson.birthYear) {
                 oldestPerson = person;

@@ -2,7 +2,7 @@ package RollingDice;
 
 import java.util.Random;
 
-public class Task2 {
+public class RollingDice {
     private final int N; // Количество игроков
     private final int K; // Количество кубиков
     private final int[] wins; // Очки каждого игрока
@@ -10,7 +10,7 @@ public class Task2 {
     private int currentPlayer; // Текущий игрок
     private final int WINNING_SCORE = 7; // Количество побед для победы
 
-    public Task2(int N, int K) {
+    public RollingDice(int N, int K) {
         this.N = N;
         this.K = K;
         wins = new int[N];
@@ -73,7 +73,7 @@ public class Task2 {
     public static void main(String[] args) {
         int players = 4; // Измените количество игроков по вашему выбору
         int diceCount = 2; // Измените количество кубиков по вашему выбору
-        Task2 game = new Task2(players, diceCount);
+        RollingDice game = new RollingDice(players, diceCount);
         game.play();
     }
 }
