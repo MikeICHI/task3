@@ -2,9 +2,9 @@ package Phone;
 
 
 class Phone{
-    int number;
-    String model;
-    int weight;
+    private int number;
+    private String model;
+    private int weight;
 
     Phone(int number, String model) {
         this.number = number;
@@ -19,9 +19,9 @@ class Phone{
 
 
     Phone(){
-        this.number = 0;
-        this.model = "Unknown";
-        this.weight=0;
+//        this.number = 0;
+//        this.model = "Unknown";
+//        this.weight=0;
     }
 
 
@@ -32,7 +32,7 @@ class Phone{
     void receiveCall(String name){
         System.out.println("Звонит: "+name );
     }
-
+    //Принимает параметры звонящего и выводит
     void receiveCall(String name, int number){
         System.out.println("Звонит: "+name+" номер: "+number);
     }
@@ -41,6 +41,7 @@ class Phone{
         return number;
     }
 
+    //Принимает массив строчных объектов в качестве параметра и выводит их
     void sendMessage(String[] phoneNumbers){
         for(String phoneNumber : phoneNumbers){
             System.out.println("новое сообщение от номера: "+ phoneNumber);
